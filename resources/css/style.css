@@ -1,0 +1,344 @@
+body {
+    margin: 0;
+    background-color: #090b0e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75em;
+}
+
+a {
+    color: #00aa44;
+    text-decoration: none;
+    font-weight: 700;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input{
+    color: #040404;
+    width: 300px;
+    padding: 7px 10px;
+    border: none;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+}
+input[type="submit"],  select{
+    padding: 7px 10px;
+    width: 320px;
+    cursor: pointer;
+}
+#adm-smt{
+    background-color: #c1ff41;
+}
+table {
+  border-collapse: collapse;  
+}
+td {
+    padding: 10px;
+}
+thead {
+    font-weight: 700;
+    background-color: #005923;
+}
+tbody tr:nth-child(even){
+    background-color: #14161a;
+}
+.entry-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    color: #040404;
+    border-radius: 5px;
+    width: 400px;
+    padding: 20px;
+}
+.logo {
+    width: 30px;
+    margin-bottom: 20px;
+}
+.page-container .logo {
+    margin: 0;
+}
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90dvh;
+}
+.form-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 10px auto;
+}
+.form-details input {
+    color: #040404;
+    width: 300px;
+    padding: 7px 10px;
+    border: none;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+
+}
+.form-details input[type="text"]:hover, .form-details input[type="password"]:hover, .form-details input[type="email"]:hover{
+    background-color: #f8f8f8;
+}
+.form-details input[type="text"]:focus, .form-details input[type="password"]:focus, .form-details input[type="email"]:focus{
+    outline: 1px solid #00aa44;
+    background-color: #fff;
+    transition: 0.05s;
+}
+
+.form-details input[type="submit"]{
+    width: 320px;
+    background-color: #040404;
+    color: #f7fffa;
+    font-weight: 700;
+    cursor: pointer;
+    align-self: center;
+}
+
+.form-details input[type="submit"]:hover {
+    background-color: #14161a;
+    transition: 0.1s ease-in;
+}
+
+.form-details input[type="date"] {
+    color: #7c7c7c;
+    font-family: inherit;
+}
+
+/* Home */
+
+.page-container {
+    width: 90dvw;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.header .user .logout:hover {
+    color:#555;
+    transition: 0.2s;
+}
+.user {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.user button {
+    background: none;
+  border: none;
+  color: #00aa44;
+  font-family: inherit;
+  cursor: pointer;
+}
+.user button:hover{
+    color: #34ff85;
+    transition: 0.3s;
+}
+.header .profile-link {
+    color: #fff;
+    padding-right: 7px;
+}
+.main-content-container {
+    height: 85dvh;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+.game-listing {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    justify-content: center;
+    gap: 10px;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    background-color: #252529;
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 12px;
+}
+.game .game-title ~ div, .game .game-image{
+    padding-bottom: 12px;
+}
+
+.game .game-image img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.game .game-title {
+    font-weight: 900;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.game .game-rating {
+    font-weight: 600;
+}
+
+.game .game-traits {
+    display: flex;
+    justify-content: space-between;
+}
+
+.game .game-cta button{
+    width: 100%;
+    font: inherit;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.game .game-cta button:hover {
+    cursor: pointer;
+}
+
+/* Forum */
+
+.chat-title {
+    width: 100%;
+}
+.chat-title, .user-community-title {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background-color: #00aa44;
+    border-bottom: 2px solid #00aa44;
+}
+.user-community-title span,.chat-title span{
+    font-weight: 900;
+    color: #040404;
+}
+.chat-container {
+    max-height: 86dvh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 400px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+    
+}
+.chat{
+    max-height: 70vw;
+    margin-top: 20px;
+    overflow: scroll;
+    justify-content: flex-end;
+}
+.chat, .message-input {
+    color: #fff;
+}
+.message-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    border-bottom: 1px #575757 solid;
+}
+.message-body:last-child{
+    border: none;
+}
+.message-body .username {
+    color: teal; /*changes depending on the user */
+    font-weight: 700;
+}
+.message-body .date-time {
+    align-self: flex-end;
+    padding-bottom: 10px;
+    font-size: 10px;
+}
+
+.message-body .date-time .time {
+    font-weight: 900;
+}
+.message-body .date-time .date {
+    color: grey;
+}
+.message-input {
+    background-color: #191919;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.message-input .message-input-form {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    gap: 10px
+}
+.message-input .message-input-form textarea {
+    width: 75%;
+    margin: 10px 15px;
+    padding: 5px;
+    align-items: center;
+    background-color: #191919;
+    border: none;
+    outline: 1px solid #fff;
+    color: #fff;
+    resize: none;
+}
+.message-input .message-input-form input[type="submit"] {
+    width: 20%;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 9px;
+    color: #040404;
+    background-color: #fff;
+}
+
+/* Profile Editing */
+
+.joined-communities {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.joined-communities:last-child{
+    border-bottom: 1px solid #575757;
+}
+.joined-communities button, #delete-account-btn {
+    border: none;
+    background-color: #f7fffa;
+    color: #040404;
+    cursor: pointer;
+    align-self: center;
+    padding: 5px 15px;
+    font: inherit;
+}
+.joined-communities button:hover {
+    background-color: #00aa447f;
+    color: #f7fffa;
+}
+
+#account-delete-section {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#account-delete-section #delete-account-btn {
+    margin-top: 20px;
+    background-color: #ff2a2a;
+}
