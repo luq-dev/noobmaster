@@ -10,6 +10,11 @@
             <input type="date" name="dob" id="" required>
             <x-nm-submit-btn value="Sign Up"/>
         </form>
+                <ul style="color: red;list-style: none;padding:0;">
+                    @foreach ($errors->all() as $error)
+                        <li>{{$error}}</li>
+                    @endforeach
+                </ul>
         <div>
             <p>
                 Already have an account?

@@ -162,7 +162,7 @@ tbody tr:nth-child(even){
 .game-listing {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    justify-content: center;
+    justify-content: flex-start;
     gap: 10px;
 }
 
@@ -341,4 +341,21 @@ tbody tr:nth-child(even){
 #account-delete-section #delete-account-btn {
     margin-top: 20px;
     background-color: #ff2a2a;
+}
+
+@media (max-width:400px) {
+    .form-container{
+        height: 100dvh;
+    }
+    .entry-form {
+        width: 300px;
+
+    }
+    .form-details input {
+        width: 250px;
+    }
+
+    .form-details input[type="submit"]{
+        width: 270px;
+    }
 }

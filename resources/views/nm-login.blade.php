@@ -10,6 +10,11 @@
                 <input type="password" name="password" placeholder="Password" id="password" required>
                 <x-nm-submit-btn value="login"/>
             </form>
+                <ul style="color: red;list-style: none;padding:0;">
+                    @foreach ($errors->all() as $error)
+                        <li>{{$error}}</li>
+                    @endforeach
+                </ul>
             <div>
                 <p>
                     Don't have an account?
