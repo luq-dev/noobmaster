@@ -14,6 +14,9 @@ class AuthController extends Controller
     
     public function showLoginForm()
     {
+        if (Auth::user()){
+            return redirect()->intended('/');
+        }
         return view('nm-login');
     }
 
